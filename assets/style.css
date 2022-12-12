@@ -3,11 +3,15 @@
     padding: 0;
 }
 
+:root {
+    --red: rgb(176, 83, 83);
+}
+
 nav {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background: rgb(176, 83, 83);
+    background-color: var(--red);
 }
 
 .welcome {
@@ -24,13 +28,16 @@ nav {
 #startBtn {
     padding: 5px 8px;
     margin-top: 10px;
+    background-color: var(--red);
+    border-radius: 5px;
+    border: solid var(--red);
+    color: #ffff;
 }
 
 @media (max-width: 800px){
     nav {
         display: flex;
         justify-content: space-between;
-        background: rgb(176, 83, 83);
     }
 
     .nav-item {
@@ -58,7 +65,6 @@ nav {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background: rgb(176, 83, 83);
     }
 
     .nav-item {
@@ -86,7 +92,6 @@ nav {
         display: flex;
         flex-direction: column;
         align-items: center;
-        background: rgb(176, 83, 83);
     }
 
     .nav-item {
