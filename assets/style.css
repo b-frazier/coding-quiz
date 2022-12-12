@@ -2,10 +2,15 @@
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
 }
 
 :root {
     --red: rgb(176, 83, 83);
+}
+
+a {
+    color: inherit;
 }
 
 nav {
