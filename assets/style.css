@@ -8,3 +8,17 @@ nav {
     justify-content: space-between;
     padding: 20px;
 }
+
+@media (max-width: 400px){
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgb(176, 83, 83);
+    }
+
+    .nav-item {
+        margin: 5px;
+
+    }
+}
