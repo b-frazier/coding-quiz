@@ -7,6 +7,8 @@
 
 :root {
     --red: rgb(176, 83, 83);
+    --pink: rgb(237, 150, 150);
+    --night: rgb(42, 42, 42);
 }
 
 a {
@@ -40,16 +42,35 @@ nav {
     color: #ffff;
 }
 
+.next {
+    display: flex;
+    justify-content: end;
+}
+
+#next-btn {
+    padding: 5px 12px;
+}
+
+.ans-btn {
+    padding: 5px 8px;
+    margin-top: 10px;
+    background-color: var(--pink);
+    border-radius: 5px;
+    border: solid var(--pink);
+    color: var(--night);
+}
+
 .hide {
     display: none;
 }
 
-.quiz {
+#quiz-container {
     margin: 80px;
 }
 
-.question {
-    margin: 8px 0;
+.answers {
+    display: flex;
+    flex-direction: column;
 }
 
 @media (max-width: 800px){
