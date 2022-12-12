@@ -10,6 +10,22 @@ nav {
     background: rgb(176, 83, 83);
 }
 
+.welcome {
+    margin: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome-item {
+    margin: 5px;
+}
+
+#startBtn {
+    padding: 5px 8px;
+    margin-top: 10px;
+}
+
 @media (max-width: 800px){
     nav {
         display: flex;
@@ -20,6 +36,21 @@ nav {
     .nav-item {
         margin: 5px;
 
+    }
+
+    .welcome {
+        margin: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .welcome-item {
+        margin: 5px;
+    }
+
+    #startBtn {
+        padding: 5px 8px;
     }
 }
 @media (max-width: 600px){
@@ -34,6 +65,21 @@ nav {
         margin: 5px;
 
     }
+
+    .welcome {
+        margin: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .welcome-item {
+        margin: 5px;
+    }
+
+    #startBtn {
+        padding: 5px 8px;
+    }
 }
 @media (max-width: 400px){
     nav {
@@ -46,5 +92,20 @@ nav {
     .nav-item {
         margin: 5px;
 
+    }
+
+    .welcome {
+        margin: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .welcome-item {
+        margin: 5px;
+    }
+
+    #startBtn {
+        padding: 5px 8px;
     }
 }
