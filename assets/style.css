@@ -40,6 +40,10 @@ nav {
     color: #ffff;
 }
 
+.hide {
+    display: none;
+}
+
 @media (max-width: 800px){
     nav {
         display: flex;
