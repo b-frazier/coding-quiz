@@ -4,12 +4,14 @@ let header = document.getElementById('header');
 let quizCont = document.getElementById('quiz-container');
 
 startBtn.addEventListener('click', function(){
-    header.classList.add('hide');
-    quizCont.classList.remove('hide');
+    start();
 });
 
-function questions(){
-
+function start(){
+    header.classList.add('hide');
+    quizCont.classList.remove('hide');
 }
 
-console.log('hello')
+function askQuestion(){
+
+}
