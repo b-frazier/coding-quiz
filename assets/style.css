@@ -7,6 +7,7 @@
 
 :root {
     --red: rgb(176, 83, 83);
+    --darkpink: rgb(135, 67, 67);
     --pink: rgb(237, 150, 150);
     --night: rgb(42, 42, 42);
 }
@@ -42,6 +43,12 @@ nav {
     color: #ffff;
 }
 
+.btn:hover {
+    background-color: var(--darkpink);
+    border: solid var(--darkpink);
+    box-shadow: 0 0 10px 3px var(--darkpink);
+}
+
 .next {
     display: flex;
     justify-content: end;
@@ -58,6 +65,13 @@ nav {
     border-radius: 5px;
     border: solid var(--pink);
     color: var(--night);
+}
+
+.ans-btn:hover {
+    background-color: var(--darkpink);
+    border: solid var(--darkpink);
+    color: white;
+    box-shadow: 0 0 10px 0 var(--darkpink);
 }
 
 .hide {
