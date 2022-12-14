@@ -4,6 +4,7 @@ let header = document.getElementById('header');
 let quizCont = document.getElementById('quiz-container');
 let questionEl = document.getElementById('questions');
 let answerBtns = document.getElementById('ans-btn');
+let answerCont = document.getElementById('answer-cont')
 
 let shuffledQuestions, currentQuestionIndex;
 
@@ -96,7 +97,7 @@ let questionBank = [
             {text: 'All of the above', correct: true},
         ]
     }
-]
+];
 
 startBtn.addEventListener('click', start);
 
@@ -107,22 +108,28 @@ function start(){
     currentQuestionIndex = 0;
     quizCont.classList.remove('hide');
     setQuestion();
-}
+};
 
 function setQuestion(){
     showQuestion(shuffledQuestions[currentQuestionIndex])
-}
-
-
+};
 
 function showQuestion(questionBank){
-    questionEl.innerText = questionBank.question
-
+    questionEl.innerText = questionBank.question;
+    questionBank.answers.forEach(answer => {
+        const button = document.createElement('button')
+        button.innerText = answer.text
+        button.classList.add('ans-btn')
+        if (answer.correct){
+            button.dataset.correct = answer.correct
+        }
+        //button.addEventListener('click', selectAnswer)
+        answerCont.append(button)
+    });
     /* for (let i = 0; i < questionBank.length; i++){
         questionEl.innerText = questionBank[i].question;
     }*/
-}
+};
 
 console.log(questionBank)
 console.log(questionBank[1].question)
-console.log(showQuestion(questionBank))
