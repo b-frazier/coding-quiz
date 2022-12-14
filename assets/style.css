@@ -26,10 +26,9 @@ nav {
 
 .score, .time {
     background-color: var(--pink);
-    padding: 10px 20px 10px 10px;
+    padding: 10px;
     border-radius: 5px;
 }
-
 
 .welcome {
     margin: 40px;
@@ -59,7 +58,7 @@ nav {
 
 .next {
     display: flex;
-    justify-content: end;
+    justify-content: center;
 }
 
 #next-btn {
