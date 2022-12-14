@@ -99,8 +99,15 @@ nav {
     margin-top: 15px;
 }
 
-main {
-    height: 100vh;
+.save-container {
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-container {
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
