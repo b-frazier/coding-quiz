@@ -1,10 +1,11 @@
 let startBtn = document.getElementById('startBtn');
-let nextBtn = document.getElementById('nextBtn');
+let nextBtn = document.getElementById('next-btn');
 let header = document.getElementById('header');
 let quizCont = document.getElementById('quiz-container');
 let questionEl = document.getElementById('questions');
 let answerBtns = document.getElementById('ans-btn');
 let answerCont = document.getElementById('answer-cont')
+let nextMsg = document.getElementById('next-msg')
 
 let shuffledQuestions, currentQuestionIndex;
 
@@ -131,7 +132,13 @@ function showQuestion(questionBank){
 function selectAnswer(e){
     const selectedBtn = e.target
     const correct = selectedBtn.dataset.correct
-
+    if (correct){
+        nextBtn.classList.remove('hide')
+        let divCont = document.createElement('div')
+        let message = `<p class="message">Correct!</p>`
+        divCont.innerHTML = message
+        nextMsg.append(divCont)
+    }
 }
 
 console.log(questionBank)
