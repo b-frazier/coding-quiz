@@ -26,13 +26,10 @@ nav {
 
 .score, .time {
     background-color: var(--pink);
-    padding: 10px 40px 10px 10px;
+    padding: 10px 20px 10px 10px;
     border-radius: 5px;
 }
 
-.time {
-    padding-right: 60px;
-}
 
 .welcome {
     margin: 40px;
