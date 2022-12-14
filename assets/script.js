@@ -166,11 +166,18 @@ function resetMsg(){
 };
 
 function selectAnswer(e){
-    const selectedBtn = e.target
-    const correct = selectedBtn.dataset.correct
+    const selectedBtn = e.target;
+    const correct = selectedBtn.dataset.correct;
     if (correct){
         right()
     } else {
         wrong()
+    };
+    if (shuffledQuestions.length > currentQuestionIndex + 1){
+        nextBtn.classList.remove('hide')
+    } else {
+        startBtn.innerText = "Restart"
+        header.classList.remove('hide')
+        quizCont.classList.add('hide')
     }
 };
