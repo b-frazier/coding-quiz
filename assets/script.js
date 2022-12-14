@@ -7,22 +7,6 @@ let answerBtns = document.getElementById('ans-btn');
 
 let shuffledQuestions, currentQuestionIndex;
 
-startBtn.addEventListener('click', function(){
-    start();
-});
-
-function start(){
-    header.classList.add('hide');
-    // shuffledQuestions = questionBank.sort(() => Math.random() - .5);
-    // currentQuestionIndex = 0;
-    quizCont.classList.remove('hide');
-    showQuestion();
-}
-
-function askQuestion(){
-    
-}
-
 let questionBank = [
     {
         question: 'What does HTML stand for?',
@@ -42,8 +26,36 @@ let questionBank = [
             {text: 'Clean Style Sheet', correct: false},
 
         ]
+    },
+    {
+        question: 'What does CSS stand for?',
+        answers: [
+            {text: 'Creative Style Sheet', correct: false},
+            {text: 'Cascading Style Sheet', correct: true},
+            {text: 'Correct Style Sheet', correct: false},
+            {text: 'Clean Style Sheet', correct: false},
+
+        ]
     }
 ]
+
+startBtn.addEventListener('click', function(){
+    start();
+});
+
+function start(){
+    header.classList.add('hide');
+    // shuffledQuestions = questionBank.sort(() => Math.random() - .5);
+    // currentQuestionIndex = 0;
+    quizCont.classList.remove('hide');
+    showQuestion();
+}
+
+function askQuestion(){
+    
+}
+
+
 
 function showQuestion(questionBank){
     for (let i = 0; i < questionBank.length; i++){
@@ -52,6 +64,5 @@ function showQuestion(questionBank){
 }
 
 console.log(questionBank)
-console.log(questionBank[0])
-console.log(questionBank[0].question)
+console.log(questionBank[1].question)
 console.log(showQuestion(questionBank))
