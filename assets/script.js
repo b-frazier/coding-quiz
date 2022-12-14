@@ -8,7 +8,9 @@ let answerCont = document.getElementById('answer-cont');
 let nextMsg = document.getElementById('next-msg');
 let score = document.getElementById('score');
 let time = document.getElementById('time');
-let timeLeft = 120;
+const startingMin = 2;
+let timeLeft = startingMin * 60;
+let scoreCount = 0;
 
 let shuffledQuestions, currentQuestionIndex;
 
@@ -108,19 +110,10 @@ startBtn.addEventListener('click', start);
 nextBtn.addEventListener('click', () => {
     currentQuestionIndex++;
     setQuestion();
-});
-
-let timeCount = setInterval(function(){
-    if (timeLeft <= 0){
-        clearInterval(timeCount)
-    }
-    time.innerHTML = 'Time Remaining:' + ' ' + timeLeft;
-    --timeLeft;
-    
-}, 1000);
-    
+}); 
 
 function start(){
+    //setInterval(countdown, 1000)
     header.classList.add('hide');
     shuffledQuestions = questionBank.sort(() => Math.random() - .5);
     console.log(shuffledQuestions)
@@ -128,6 +121,17 @@ function start(){
     quizCont.classList.remove('hide');
     setQuestion();
 };
+
+function countdown(){
+    const minutes = Math.floor(timeLeft/60)
+    let seconds = timeLeft % 60;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    time.innerHTML = `<p>Time Remaining: ${minutes}:${seconds}</p>`;
+    timeLeft--
+    if (timeLeft <= 0){
+        clearInterval(countdown)
+    }
+}
 
 function setQuestion(){
     showQuestion(shuffledQuestions[currentQuestionIndex])
@@ -159,6 +163,7 @@ function right(){
 
 function wrong(){
     resetMsg()
+
     let divCont = document.createElement('div')
     let message = `<p class="message">Wrong! Try again.</p>`
     divCont.innerHTML = message
@@ -188,7 +193,7 @@ function selectAnswer(e){
         wrong()
     };
     if (shuffledQuestions.length > currentQuestionIndex + 1){
-        nextBtn.classList.remove('hide')
+
     } else {
         startBtn.innerText = "Restart"
         header.classList.remove('hide')
