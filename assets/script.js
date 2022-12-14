@@ -123,13 +123,16 @@ function showQuestion(questionBank){
         if (answer.correct){
             button.dataset.correct = answer.correct
         }
-        //button.addEventListener('click', selectAnswer)
+        button.addEventListener('click', selectAnswer)
         answerCont.append(button)
     });
-    /* for (let i = 0; i < questionBank.length; i++){
-        questionEl.innerText = questionBank[i].question;
-    }*/
 };
+
+function selectAnswer(e){
+    const selectedBtn = e.target
+    const correct = selectedBtn.dataset.correct
+
+}
 
 console.log(questionBank)
 console.log(questionBank[1].question)
