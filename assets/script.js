@@ -103,18 +103,19 @@ startBtn.addEventListener('click', start);
 function start(){
     header.classList.add('hide');
     shuffledQuestions = questionBank.sort(() => Math.random() - .5);
+    console.log(shuffledQuestions)
     currentQuestionIndex = 0;
     quizCont.classList.remove('hide');
     setQuestion();
 }
 
 function setQuestion(){
-    
+    showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
 
 
-function showQuestion(question){
+function showQuestion(questionBank){
     questionEl.innerText = questionBank.question
 
     /* for (let i = 0; i < questionBank.length; i++){
