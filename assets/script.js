@@ -32,6 +32,16 @@ let questionBank = [
             {text: 'HyperText Mapping Language', correct: false},
             {text: 'HeroText Mapping Language', correct: false}
         ]
+    },
+    {
+        question: 'What does CSS stand for?',
+        answers: [
+            {text: 'Creative Style Sheet', correct: false},
+            {text: 'Cascading Style Sheet', correct: true},
+            {text: 'Correct Style Sheet', correct: false},
+            {text: 'Clean Style Sheet', correct: false},
+
+        ]
     }
 ]
 
