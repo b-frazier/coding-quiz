@@ -163,7 +163,6 @@ function right(){
     divCont.innerHTML = message
     nextMsg.append(divCont)
     addScore()
-    console.log(scoreCount)
 };
 
 function wrong(){
@@ -173,7 +172,6 @@ function wrong(){
     divCont.innerHTML = message
     nextMsg.append(divCont)
     subScore()
-    console.log(scoreCount)
 };
 
 function resetState(){
