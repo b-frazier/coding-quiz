@@ -4,8 +4,11 @@ let header = document.getElementById('header');
 let quizCont = document.getElementById('quiz-container');
 let questionEl = document.getElementById('questions');
 let answerBtns = document.getElementById('ans-btn');
-let answerCont = document.getElementById('answer-cont')
-let nextMsg = document.getElementById('next-msg')
+let answerCont = document.getElementById('answer-cont');
+let nextMsg = document.getElementById('next-msg');
+let score = document.getElementById('score');
+let time = document.getElementById('time');
+let seconds = 0;
 
 let shuffledQuestions, currentQuestionIndex;
 
@@ -100,11 +103,18 @@ let questionBank = [
     }
 ];
 
+
 startBtn.addEventListener('click', start);
 nextBtn.addEventListener('click', () => {
     currentQuestionIndex++;
     setQuestion();
 });
+
+setInterval(timer, 1000);
+function timer(){
+    ++seconds;
+    time.innerHTML = 'Time Remaining:' + ' ' + seconds;
+}
 
 function start(){
     header.classList.add('hide');
