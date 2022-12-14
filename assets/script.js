@@ -101,6 +101,10 @@ let questionBank = [
 ];
 
 startBtn.addEventListener('click', start);
+nextBtn.addEventListener('click', () => {
+    currentQuestionIndex++;
+    setQuestion();
+});
 
 function start(){
     header.classList.add('hide');
@@ -116,6 +120,7 @@ function setQuestion(){
 };
 
 function showQuestion(questionBank){
+    resetState()
     questionEl.innerText = questionBank.question;
     questionBank.answers.forEach(answer => {
         const button = document.createElement('button')
@@ -130,6 +135,7 @@ function showQuestion(questionBank){
 };
 
 function right(){
+    resetMsg()
     nextBtn.classList.remove('hide')
     let divCont = document.createElement('div')
     let message = `<p class="message">Correct!</p>`
@@ -138,11 +144,28 @@ function right(){
 };
 
 function wrong(){
+    resetMsg()
     let divCont = document.createElement('div')
     let message = `<p class="message">Wrong! Try again.</p>`
     divCont.innerHTML = message
     nextMsg.append(divCont)
 };
+
+function resetState(){
+    nextBtn.classList.add('hide');
+    while (answerCont.firstChild){
+        answerCont.removeChild(answerCont.firstChild)
+    }
+    while (nextMsg.firstChild){
+        nextMsg.removeChild(nextMsg.firstChild)
+    }
+}
+
+function resetMsg(){
+    while (nextMsg.firstChild){
+        nextMsg.removeChild(nextMsg.firstChild)
+    }
+}
 
 function selectAnswer(e){
     const selectedBtn = e.target
