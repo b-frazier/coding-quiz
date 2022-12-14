@@ -138,6 +138,11 @@ function selectAnswer(e){
         let message = `<p class="message">Correct!</p>`
         divCont.innerHTML = message
         nextMsg.append(divCont)
+    } else {
+        let divCont = document.createElement('div')
+        let message = `<p class="message">Wrong! Try again.</p>`
+        divCont.innerHTML = message
+        nextMsg.append(divCont)
     }
 }
 
