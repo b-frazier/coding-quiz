@@ -8,7 +8,7 @@ let answerCont = document.getElementById('answer-cont');
 let nextMsg = document.getElementById('next-msg');
 let score = document.getElementById('score');
 let time = document.getElementById('time');
-
+let timeLeft = 120;
 
 let shuffledQuestions, currentQuestionIndex;
 
@@ -109,7 +109,7 @@ nextBtn.addEventListener('click', () => {
     currentQuestionIndex++;
     setQuestion();
 });
-let timeLeft = 120;
+
 let timeCount = setInterval(function(){
     if (timeLeft <= 0){
         clearInterval(timeCount)
