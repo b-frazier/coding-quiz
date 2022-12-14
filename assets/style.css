@@ -101,9 +101,10 @@ nav {
 
 .save-container {
     display: flex;
-    height: 80px;
+    height: 50px;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
+    margin: 8px 0;
 }
 
 .score-container {
@@ -120,7 +121,7 @@ nav {
     align-items: center;
     justify-content: center;
     width: 400px;
-    height: 400px;
+    padding: 25px 10px;
     border: 2px solid var(--night);
 }
 
@@ -128,7 +129,6 @@ nav {
     height: 30px;
     width: 300px;
     border: 2px solid var(--night);
-    margin-bottom: 25px;
 }
 
 .all-scores{
@@ -138,7 +138,12 @@ nav {
 }
 
 .score-txt{
-    margin-bottom: 15px;
+    margin: 8px 0;
+}
+
+.initials {
+    padding: 4px 8px;
+    margin-right: 4px;
 }
 
 @media (max-width: 800px){
