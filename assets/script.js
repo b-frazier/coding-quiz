@@ -156,16 +156,14 @@ function resetState(){
     while (answerCont.firstChild){
         answerCont.removeChild(answerCont.firstChild)
     }
-    while (nextMsg.firstChild){
-        nextMsg.removeChild(nextMsg.firstChild)
-    }
-}
+    resetMsg()
+};
 
 function resetMsg(){
     while (nextMsg.firstChild){
         nextMsg.removeChild(nextMsg.firstChild)
     }
-}
+};
 
 function selectAnswer(e){
     const selectedBtn = e.target
