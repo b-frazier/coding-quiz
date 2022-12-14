@@ -99,6 +99,38 @@ nav {
     margin-top: 15px;
 }
 
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 400px;
+    /* margin: auto; */
+    border: 2px solid var(--night);
+}
+
+.final-score {
+    height: 50px;
+    width: 300px;
+    border: 2px solid var(--night);
+    margin-bottom: 25px;
+}
+
+.all-scores{
+    height: 200px;
+    width: 300px;
+    border: 2px solid var(--night);
+}
+
 @media (max-width: 800px){
     nav {
         display: flex;
