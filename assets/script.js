@@ -8,7 +8,7 @@ let answerCont = document.getElementById('answer-cont');
 let nextMsg = document.getElementById('next-msg');
 let score = document.getElementById('score');
 let time = document.getElementById('time');
-let seconds = 0;
+
 
 let shuffledQuestions, currentQuestionIndex;
 
@@ -109,12 +109,16 @@ nextBtn.addEventListener('click', () => {
     currentQuestionIndex++;
     setQuestion();
 });
-
-setInterval(timer, 1000);
-function timer(){
-    ++seconds;
-    time.innerHTML = 'Time Remaining:' + ' ' + seconds;
-}
+let timeLeft = 120;
+let timeCount = setInterval(function(){
+    if (timeLeft <= 0){
+        clearInterval(timeCount)
+    }
+    time.innerHTML = 'Time Remaining:' + ' ' + timeLeft;
+    --timeLeft;
+    
+}, 1000);
+    
 
 function start(){
     header.classList.add('hide');
