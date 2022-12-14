@@ -1,8 +1,9 @@
 # coding-quiz
 ## User Story
 ```md
-As a bootcamp student I want a fun way to study 
-what I am learning in class in order to consistently refresh my knowledge.
+As a bootcamp student 
+I want a fun way to study what I am learning in class 
+in order to consistently refresh my knowledge.
 ```
 ## Acceptance Criteria
 ```md
