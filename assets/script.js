@@ -98,25 +98,23 @@ let questionBank = [
     }
 ]
 
-startBtn.addEventListener('click', function(){
-    start();
-});
+startBtn.addEventListener('click', start);
 
 function start(){
     header.classList.add('hide');
     shuffledQuestions = questionBank.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
     quizCont.classList.remove('hide');
-    showQuestion();
+    setQuestion();
 }
 
-function askQuestion(){
+function setQuestion(){
     
 }
 
 
 
-function showQuestion(questionBank){
+function showQuestion(question){
     questionEl.innerText = questionBank.question
 
     /* for (let i = 0; i < questionBank.length; i++){
