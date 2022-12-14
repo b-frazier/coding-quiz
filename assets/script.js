@@ -125,7 +125,7 @@ function start(){
 
 function countdown(){
     const go = setInterval(() => {
-        const minutes = Math.floor(timeLeft/60)
+    const minutes = Math.floor(timeLeft/60)
     let seconds = timeLeft % 60;
     seconds = seconds < 10 ? '0' + seconds : seconds;
     time.innerHTML = `<p>Time Remaining: ${minutes}:${seconds}</p>`;
@@ -162,15 +162,18 @@ function right(){
     let message = `<p class="message">Correct!</p>`
     divCont.innerHTML = message
     nextMsg.append(divCont)
+    addScore()
+    console.log(scoreCount)
 };
 
 function wrong(){
     resetMsg()
-
     let divCont = document.createElement('div')
     let message = `<p class="message">Wrong! Try again.</p>`
     divCont.innerHTML = message
     nextMsg.append(divCont)
+    subScore()
+    console.log(scoreCount)
 };
 
 function resetState(){
@@ -200,4 +203,14 @@ function selectAnswer(e){
         header.classList.remove('hide')
         quizCont.classList.add('hide')
     }
+};
+
+function addScore(){
+    scoreCount += 15
+    score.innerHTML = `<p>Score: ${scoreCount}</p>`;
+};
+
+function subScore(){
+    scoreCount -= 20
+    score.innerHTML = `<p>Score: ${scoreCount}</p>`;
 };
