@@ -114,6 +114,7 @@ nextBtn.addEventListener('click', () => {
 
 function start(){
     //setInterval(countdown, 1000)
+    countdown();
     header.classList.add('hide');
     shuffledQuestions = questionBank.sort(() => Math.random() - .5);
     console.log(shuffledQuestions)
@@ -123,14 +124,16 @@ function start(){
 };
 
 function countdown(){
-    const minutes = Math.floor(timeLeft/60)
+    const go = setInterval(() => {
+        const minutes = Math.floor(timeLeft/60)
     let seconds = timeLeft % 60;
     seconds = seconds < 10 ? '0' + seconds : seconds;
     time.innerHTML = `<p>Time Remaining: ${minutes}:${seconds}</p>`;
-    timeLeft--
-    if (timeLeft <= 0){
-        clearInterval(countdown)
-    }
+        timeLeft--
+        if (timeLeft <= 0){
+            clearInterval(go)
+        }
+    }, 1000) 
 }
 
 function setQuestion(){
@@ -192,9 +195,7 @@ function selectAnswer(e){
     } else {
         wrong()
     };
-    if (shuffledQuestions.length > currentQuestionIndex + 1){
-
-    } else {
+    if (!shuffledQuestions.length > currentQuestionIndex + 1){
         startBtn.innerText = "Restart"
         header.classList.remove('hide')
         quizCont.classList.add('hide')
