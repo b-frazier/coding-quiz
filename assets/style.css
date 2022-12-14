@@ -19,8 +19,19 @@ a {
 nav {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     padding: 20px;
     background-color: var(--red);
+}
+
+.score, .time {
+    background-color: var(--pink);
+    padding: 10px 40px 10px 10px;
+    border-radius: 5px;
+}
+
+.time {
+    padding-right: 60px;
 }
 
 .welcome {
@@ -89,6 +100,7 @@ nav {
 
 .message {
     text-align: center;
+    margin-top: 15px;
 }
 
 @media (max-width: 800px){
