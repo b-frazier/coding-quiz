@@ -87,6 +87,10 @@ nav {
     flex-direction: column;
 }
 
+.message {
+    text-align: center;
+}
+
 @media (max-width: 800px){
     nav {
         display: flex;
