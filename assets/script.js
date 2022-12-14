@@ -129,22 +129,27 @@ function showQuestion(questionBank){
     });
 };
 
+function right(){
+    nextBtn.classList.remove('hide')
+    let divCont = document.createElement('div')
+    let message = `<p class="message">Correct!</p>`
+    divCont.innerHTML = message
+    nextMsg.append(divCont)
+};
+
+function wrong(){
+    let divCont = document.createElement('div')
+    let message = `<p class="message">Wrong! Try again.</p>`
+    divCont.innerHTML = message
+    nextMsg.append(divCont)
+};
+
 function selectAnswer(e){
     const selectedBtn = e.target
     const correct = selectedBtn.dataset.correct
     if (correct){
-        nextBtn.classList.remove('hide')
-        let divCont = document.createElement('div')
-        let message = `<p class="message">Correct!</p>`
-        divCont.innerHTML = message
-        nextMsg.append(divCont)
+        right()
     } else {
-        let divCont = document.createElement('div')
-        let message = `<p class="message">Wrong! Try again.</p>`
-        divCont.innerHTML = message
-        nextMsg.append(divCont)
+        wrong()
     }
-}
-
-console.log(questionBank)
-console.log(questionBank[1].question)
+};
