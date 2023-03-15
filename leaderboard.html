@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>The Coding Quiz</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-item" id="home-link">
+            <p><a href="index.html">HOME</a></p>
+        </div>
+        <div class="nav-item" id="leaderboard">
+            <p><a href="leaderboard.html">LEADERBOARD</a></p>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="score-container">
+            <div class="score-box">
+                <p class="score-txt">Your Score</p>
+                <div class="final-score">
+                    <div class="user-score"></div>
+                </div>
+                <div class="save-container">
+                    <div class="save-score">
+                        <input type="text" class="initials" placeholder="Enter Initials" maxlength="3">
+                        <input type="button" class="btn" id="initBtn" value="SAVE">
+                    </div>
+                </div>
+                <p class="score-txt">Top Scores</p>
+                <div class="all-scores">
+                    <div class="score-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/script.js"></script>
+</body>
+</html>
