@@ -45,6 +45,15 @@ nav {
     text-align: center;
 }
 
+.instructions {
+    width: 400px;
+    margin: 10px;
+}
+
+p {
+    font-size: 14px;
+}
+
 .start {
     font-size: 18px;
 }
